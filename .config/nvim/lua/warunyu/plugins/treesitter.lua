@@ -20,23 +20,23 @@ return {
 							set_jumps = true,
 
 							goto_next_start = {
-								["<s-w>"] = {
+								["<C-l>"] = {
 									query = "@parameter.inner",
 									desc = "Go to next parameter",
 								},
-								["<c-j>"] = {
-									query = "@statement.outer",
+								["<C-j>"] = {
+									query = { "@function.outer", "@statement.outer" },
 									desc = "Go to next statement",
 								},
 							},
 
 							goto_previous_start = {
-								["<s-b>"] = {
+								["<C-h>"] = {
 									query = "@parameter.inner",
 									desc = "Go to previous parameter",
 								},
-								["<c-k>"] = {
-									query = "@statement.outer",
+								["<C-k>"] = {
+									query = { "@function.outer", "@statement.outer" },
 									desc = "Go to previous statement",
 								},
 							},

@@ -24,13 +24,13 @@ return {
 				special_files = {},
 				symlink_destination = false,
 				indent_markers = {
-					enable = false,
+					enable = true,
 				},
 				icons = {
 					git_placement = "signcolumn",
 					show = {
 						file = true,
-						folder = false,
+						folder = true,
 						folder_arrow = true,
 						git = true,
 					},
@@ -49,8 +49,8 @@ return {
 							ignored = "◌",
 						},
 						folder = {
-							arrow_closed = "", -- arrow when folder is closed
-							arrow_open = "", -- arrow when folder is open
+							arrow_closed = "", -- arrow when folder is closed
+							arrow_open = "", -- arrow when folder is open
 						},
 					},
 				},
