@@ -1,0 +1,37 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+# add_newline = true
+
+# Move all prompts to right side
+format = """$character"""
+right_format = """$all"""
+
+[directory]
+truncation_length = 2
+
+[cmd_duration]
+min_time = 10
+format = 'took [$duration](bold yellow)'
+
+[time]
+time_format = "%T"
+format = "🕙 $time($style) "
+style = "bright-white"
+disabled = true
+
+# Replace the '❯' symbol in the prompt with '➜'
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[✖](bold red)'
+
+[memory_usage]
+format = "$symbol[${ram}( | ${swap})]($style) "
+threshold = 70
+style = "bold dimmed white"
+disabled = true
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
