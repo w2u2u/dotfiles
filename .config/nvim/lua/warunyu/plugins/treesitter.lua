@@ -26,7 +26,7 @@ return {
 								},
 								["<C-j>"] = {
 									query = { "@function.outer", "@statement.outer" },
-									desc = "Go to next statement",
+									desc = "Go to next function/statement",
 								},
 							},
 
@@ -37,7 +37,7 @@ return {
 								},
 								["<C-k>"] = {
 									query = { "@function.outer", "@statement.outer" },
-									desc = "Go to previous statement",
+									desc = "Go to previous function/statement",
 								},
 							},
 						},

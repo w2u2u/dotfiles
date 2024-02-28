@@ -14,8 +14,18 @@ return {
 			local on_attach = function(client, bufnr)
 				on_attach_utils(client, bufnr)
 
-				vim.keymap.set("n", "K", rust_tools.hover_actions.hover_actions, { buffer = bufnr })
-				vim.keymap.set("n", "<leader>a", rust_tools.code_action_group.code_action_group, { buffer = bufnr })
+				vim.keymap.set(
+					"n",
+					"K",
+					rust_tools.hover_actions.hover_actions,
+					{ desc = "Hover action", buffer = bufnr }
+				)
+				vim.keymap.set(
+					"n",
+					"<leader>ca",
+					rust_tools.code_action_group.code_action_group,
+					{ desc = "Code actions", buffer = bufnr }
+				)
 			end
 
 			-- codelldb
