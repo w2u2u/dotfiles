@@ -190,3 +190,17 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 # make sure the --git-dir is the same as the
 # directory where you created the repo above.
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+
+# Keybindings
+bindkey "\ew" forward-word # alt+w
+bindkey "\eb" backward-word # alt+b
+bindkey "\el" forward-word # alt+l
+bindkey "\eh" backward-word # alt+h
+
+# Zsh functions
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
+
+# Poetry a Python package manager
+# mkdir $ZSH_CUSTOM/plugins/poetry
+# poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
