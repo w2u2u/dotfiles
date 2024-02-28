@@ -17,7 +17,8 @@ return {
 				},
 			},
 			ensure_installed = {
-				"jq", -- Json
+				"jq", -- Json Formatter
+				"ruff", -- Python Formatter
 			},
 			automatic_installation = true,
 		})
@@ -29,7 +30,8 @@ return {
 				"rust_analyzer",
 				"rubocop", -- Ruby
 				"gopls",
-				"pyright", -- Python
+				"pylyzer", -- Python LSP
+				"ruff_lsp",
 				"tsserver", -- Typescript / Javascript
 				"cssls",
 				"html",

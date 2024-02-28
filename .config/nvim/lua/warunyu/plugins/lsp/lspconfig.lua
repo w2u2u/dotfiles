@@ -88,10 +88,9 @@ return {
 			},
 		})
 
-		lspconfig.pyright.setup({
+		lspconfig.ruff_lsp.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
-			filetypes = { "python" },
 		})
 
 		lspconfig.lua_ls.setup({
