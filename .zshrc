@@ -190,6 +190,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 # make sure the --git-dir is the same as the
 # directory where you created the repo above.
 alias config="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
+alias config-lazy="lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
 # Keybindings
 bindkey "\ew" forward-word # alt+w
