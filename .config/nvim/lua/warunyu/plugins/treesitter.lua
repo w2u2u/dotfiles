@@ -56,6 +56,7 @@ return {
 				"rust",
 				"ruby",
 				"go",
+				"zig",
 				"python",
 				"typescript",
 				"javascript",

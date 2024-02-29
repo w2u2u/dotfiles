@@ -88,6 +88,11 @@ return {
 			},
 		})
 
+		lspconfig.zls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
 		lspconfig.ruff_lsp.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,

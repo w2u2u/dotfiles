@@ -30,6 +30,7 @@ return {
 				"rust_analyzer",
 				"rubocop", -- Ruby
 				"gopls",
+				"zls", -- Zig
 				"pylyzer", -- Python LSP
 				"ruff_lsp",
 				"tsserver", -- Typescript / Javascript
