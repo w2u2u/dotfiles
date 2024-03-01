@@ -205,3 +205,7 @@ autoload -Uz compinit && compinit
 # Poetry a Python package manager
 # mkdir $ZSH_CUSTOM/plugins/poetry
 # poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+
+# Modular => Mojo 🔥
+export MODULAR_HOME="$HOME/.modular"
+export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
