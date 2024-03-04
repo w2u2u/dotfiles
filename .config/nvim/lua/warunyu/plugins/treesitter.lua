@@ -54,6 +54,9 @@ return {
 			ensure_installed = {
 				"lua",
 				"rust",
+				"nim",
+				"elixir",
+				"zig",
 				"ruby",
 				"go",
 				"zig",

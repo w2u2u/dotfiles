@@ -28,10 +28,12 @@ return {
 			-- list of servers for mason to install
 			ensure_installed = {
 				"lua_ls",
-				"rust_analyzer",
-				"rubocop", -- Ruby
+				"rust_analyzer", -- Rust 🦀
+				"nim_langserver", -- Nim 👑
+				"elixirls", -- Elixir 🧪
+				"zls", -- Zig 󱐋
+				"rubocop", -- Ruby 💎
 				"gopls",
-				"zls", -- Zig
 				"pylyzer", -- Python LSP
 				"ruff_lsp", -- Python LSP
 				"clangd", -- C++ LSP

@@ -40,6 +40,22 @@ return {
 			},
 		})
 
+		lspconfig.nim_langserver.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
+		lspconfig.elixirls.setup({
+			cmd = { "elixir-ls" },
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
+		lspconfig.zls.setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+
 		lspconfig.rubocop.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
@@ -86,11 +102,6 @@ return {
 					},
 				},
 			},
-		})
-
-		lspconfig.zls.setup({
-			on_attach = on_attach,
-			capabilities = capabilities,
 		})
 
 		lspconfig.ruff_lsp.setup({

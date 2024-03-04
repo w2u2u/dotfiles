@@ -36,7 +36,7 @@ return {
 				v = "󱊁 ", -- etc..
 			},
 			sections = {
-				left = { "right_sep", "-mode", "left_sep", "cwd", "right_sep", "-file_name", "left_sep" },
+				left = { "right_sep", "- ", "-mode", "left_sep", "cwd", "right_sep", "-file_name", "left_sep" },
 				-- mid = { "right_sep", "-branch", "left_sep" },
 				mid = { "branch" },
 				right = {
@@ -59,9 +59,9 @@ return {
 				-- NvimTree = { "NvimTree", " " },
 			},
 			lsp_symbols = {
-				Error = " ",
-				Info = " ",
-				Warn = " ",
+				Error = " ",
+				Info = " ",
+				Warn = " ",
 				Hint = " ",
 			},
 		})
