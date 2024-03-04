@@ -30,13 +30,13 @@ return {
 				v = "#8aadf4", -- etc..
 			},
 			mode_icons = {
-				n = "󰌌 ",
-				i = " ",
-				c = " ",
-				v = "󱊁 ", -- etc..
+				n = "󰌌",
+				i = "",
+				c = "",
+				v = "󱊁", -- etc..
 			},
 			sections = {
-				left = { "right_sep", "- ", "-mode", "left_sep", "cwd", "right_sep", "-file_name", "left_sep" },
+				left = { "right_sep", "-mode", "left_sep", "cwd", "right_sep", "-file_name", "left_sep" },
 				-- mid = { "right_sep", "-branch", "left_sep" },
 				mid = { "branch" },
 				right = {
