@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ import = "warunyu.plugins" },
 	{ import = "warunyu.plugins.lsp" },
+	{ import = "warunyu.plugins.lang" },
 }, {
 	install = {
 		colorscheme = { "catppuccin" },

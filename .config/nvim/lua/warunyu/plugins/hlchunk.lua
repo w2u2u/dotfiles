@@ -5,8 +5,12 @@ return {
 		local colors_name = vim.g.colors_name
 		local color = "#c6a0f6"
 
-		if colors_name == "gruvbox" then
+		if string.find(colors_name, "gruvbox") then
 			color = "#fb4934"
+		elseif string.find(colors_name, "material") then
+			color = "#FFCB6B"
+		elseif string.find(colors_name, "cyberdream") then
+			color = "#ff5ea0"
 		end
 
 		require("hlchunk").setup({
