@@ -11,6 +11,9 @@ right_format = """$all"""
 [directory]
 truncation_length = 2
 
+[git_branch]
+symbol = ' '
+
 [cmd_duration]
 min_time = 10
 format = 'took [$duration](bold yellow)'
