@@ -14,6 +14,7 @@ truncation_length = 2
 [cmd_duration]
 min_time = 10
 format = 'took [$duration](bold yellow)'
+disabled = true
 
 [time]
 time_format = "%T"
