@@ -19,6 +19,7 @@ return {
 			ensure_installed = {
 				"jq", -- Json Formatter
 				"ruff", -- Python Formatter
+				"clang-format", -- C++ Formatter
 			},
 			automatic_installation = true,
 		})
@@ -32,7 +33,8 @@ return {
 				"gopls",
 				"zls", -- Zig
 				"pylyzer", -- Python LSP
-				"ruff_lsp",
+				"ruff_lsp", -- Python LSP
+				"clangd", -- C++ LSP
 				"tsserver", -- Typescript / Javascript
 				"cssls",
 				"html",
