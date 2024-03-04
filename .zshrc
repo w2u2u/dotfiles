@@ -208,3 +208,8 @@ autoload -Uz compinit && compinit
 # Modular => Mojo 🔥
 export MODULAR_HOME="$HOME/.modular"
 export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+
+# Nim 👑
+export PATH=/Users/warunyu/.nimble/bin:$PATH
+export CHOOSENIM_NO_ANALYTICS=1
+export DO_NOT_TRACK=1
