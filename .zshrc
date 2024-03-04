@@ -142,7 +142,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Neovim
 alias vim="nvim"
-alias code="nvim"
 # alias vim="lvim"
 alias nvim-clean="rm -rf ~/.cache/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 
