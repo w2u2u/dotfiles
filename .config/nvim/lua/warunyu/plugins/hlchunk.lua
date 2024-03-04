@@ -1,6 +1,6 @@
 return {
 	"shellRaining/hlchunk.nvim",
-	event = { "UIEnter" },
+	ft = { "lua", "rust", "cpp" },
 	config = function()
 		local colors_name = vim.g.colors_name
 		local color = "#c6a0f6"
@@ -16,6 +16,8 @@ return {
 		require("hlchunk").setup({
 			chunk = {
 				enable = true,
+				notify = true,
+				use_treesitter = true,
 				style = { color },
 			},
 			indent = {
