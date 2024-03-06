@@ -24,7 +24,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("tokyonight").setup({
-				transparent = true,
+				transparent = false,
 			})
 		end,
 	},
@@ -44,7 +44,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("onedark").setup({
-				transparent = true,
+				transparent = false,
 				cmp_itemkind_reverse = true,
 			})
 		end,
@@ -70,7 +70,7 @@ return {
 		config = function()
 			require("nightfox").setup({
 				options = {
-					transparent = true,
+					transparent = false,
 				},
 			})
 		end,
