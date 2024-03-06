@@ -45,6 +45,7 @@ return {
 				})
 			end,
 		},
+		"rrethy/nvim-treesitter-endwise",
 	},
 	config = function()
 		local configs = require("nvim-treesitter.configs")
@@ -75,6 +76,9 @@ return {
 			indent = {
 				enable = true,
 			},
+			endwise = {
+				enable = true,
+			},
 			incremental_selection = {
 				enable = true,
 				keymaps = {
@@ -83,6 +87,12 @@ return {
 					node_incremental = "<CR>",
 					scope_incremental = "false",
 				},
+			},
+		})
+
+		require("nvim-treesitter.configs").setup({
+			endwise = {
+				enable = true,
 			},
 		})
 	end,
