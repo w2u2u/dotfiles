@@ -1,6 +1,6 @@
 return {
 	"shellRaining/hlchunk.nvim",
-	ft = { "lua", "rust", "cpp" },
+	ft = { "lua", "rust", "go", "cpp" },
 	config = function()
 		local colors_name = vim.g.colors_name
 		local color = "#c6a0f6"
