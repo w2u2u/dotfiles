@@ -1,0 +1,4 @@
+[font]
+normal = { family = "MesloLGS Nerd Font Mono" , style = "Regular" }
+# normal = { family = "Liga SFMono Nerd Font", style = "Regular" }
+size = 12
