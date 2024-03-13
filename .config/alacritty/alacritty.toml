@@ -9,10 +9,21 @@ import = [
 [env]
 TERM = "xterm-256color"
 
+[window]
+dynamic_padding = true
+decorations = "Buttonless"
+opacity = 0.9
+blur = true
+
 [font]
-normal = { family = "MesloLGS Nerd Font Mono" , style = "Regular" }
-# normal = { family = "Liga SFMono Nerd Font", style = "Regular" }
+normal = { family = "MesloLGS Nerd Font", style = "Regular" }
+bold = { family = "MesloLGS Nerd Font", style = "Regular" }
+italic = { family = "MesloLGS Nerd Font", style = "Regular" }
+bold_italic = { family = "MesloLGS Nerd Font", style = "Regular" }
 size = 12
+
+[cursor]
+style = { shape = "Block", blinking = "Never" }
 
 [keyboard]
 bindings = []
