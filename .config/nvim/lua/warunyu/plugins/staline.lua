@@ -7,7 +7,7 @@ return {
 				left_separator = "", -- "",
 				right_separator = "", -- "",
 				full_path = false,
-				line_column = " %l/%L 󰗈 :%c 並%p%% ", -- `:h stl` to see all flags.
+				line_column = " %l/%L 󰗈 :%c 󰗉 %p%% ", -- `:h stl` to see all flags.
 
 				fg = "#000000", -- Foreground text color.
 				bg = "none", -- Default background is transparent.
@@ -16,7 +16,7 @@ return {
 				true_colors = true, -- true lsp colors.
 				font_active = "none", -- "bold", "italic", "bold,italic", etc
 
-				mod_symbol = "  ",
+				mod_symbol = " 󰗧 ",
 				lsp_client_symbol = "󰧑 ",
 				lsp_client_character_length = 12, -- Shorten LSP client names.
 				branch_symbol = " ",
@@ -24,16 +24,20 @@ return {
 				null_ls_symbol = "", -- A symbol to indicate that a source is coming from null-ls
 			},
 			mode_colors = {
-				n = "#a6da95",
-				i = "#c6a0f6",
-				c = "#f5a97f",
-				v = "#8aadf4", -- etc..
+				n = "#cba6f7", -- Blue -- Mauve
+				i = "#f9e2af", -- Yellow -- Yellow
+				c = "#f38ba8", -- Blue -- Red
+				v = "#a6e3a1", -- Green -- Green
+				V = "#74c7ec", -- Green -- Sapphire
+				t = "#eba0ac", -- Blue -- Maroon
 			},
 			mode_icons = {
 				n = "󰌌",
-				i = "",
-				c = "",
+				i = "󰗧",
+				c = "",
 				v = "󱊁", -- etc..
+				V = "󰩬",
+				t = "",
 			},
 			sections = {
 				left = { "right_sep", "-mode", "left_sep", "cwd", "right_sep", "-file_name", "left_sep" },
@@ -88,7 +92,8 @@ return {
 			end,
 		})
 
-		vim.keymap.set("n", "<Tab>", "<Cmd>bNext<CR>", { desc = "Next buffer" })
+		vim.keymap.set("n", "<Tab>", "<Cmd>bnext<CR>", { desc = "Next buffer" })
+		vim.keymap.set("n", "<S-Tab>", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
 		vim.keymap.set("n", "<leader>x", "<Cmd>bdelete<CR>", { desc = "Close buffer" })
 	end,
 }
