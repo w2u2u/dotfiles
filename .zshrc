@@ -213,3 +213,5 @@ export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
 export PATH=/Users/warunyu/.nimble/bin:$PATH
 export CHOOSENIM_NO_ANALYTICS=1
 export DO_NOT_TRACK=1
+
+export EDITOR=hx
