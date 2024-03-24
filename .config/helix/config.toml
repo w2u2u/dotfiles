@@ -18,7 +18,6 @@ render = true
 
 [editor.lsp]
 auto-signature-help = true
-display-messages = true
 display-inlay-hints = true
 
 [editor.statusline]
