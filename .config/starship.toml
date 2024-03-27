@@ -4,13 +4,14 @@
 # Inserts a blank line between shell prompts
 # add_newline = true
 
-# Left side style
+# Fully informative style
 format = """
 $all
 $character
 """
+right_format = """$battery$time"""
 
-# Right side style
+# Minimal style
 # format = """$character"""
 # right_format = """$all"""
 
@@ -28,8 +29,8 @@ disabled = false
 
 [cmd_duration]
 min_time = 10
-format = 'took [$duration](bold yellow) '
-disabled = false
+format = 'took [$duration](bold yellow)'
+disabled = true
 
 [[battery.display]]
 threshold = 100
