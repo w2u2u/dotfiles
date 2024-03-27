@@ -1,11 +1,28 @@
 [[language]]
 name = "rust"
 auto-format = true
-
 roots = [
   "Cargo.toml",
   "Cargo.lock"
 ]
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+[language-server.rust-analyzer.config]
+inlayHints.bindingModeHints.enable = true
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "go"
+auto-format = true
+[language-server.gopls]
+command = "gopls"
+
+[[language]]
+name = "zig"
+auto-format = true
+[language-server.zls]
+command = "zls"
 
 [language.auto-pairs]
 '(' = ')'
@@ -14,23 +31,10 @@ roots = [
 '"' = '"'
 '`' = '`'
 
-[language-server.rust-analyzer]
-command = "rust-analyzer"
-
-[language-server.rust-analyzer.config]
-inlayHints.bindingModeHints.enable = true
-
-[language-server.rust-analyzer.config.check]
-command = "clippy"
-
-[[language]]
-name = "rust"
-
 [language.debugger]
 name = "lldb-vscode"
 transport = "stdio"
 command = "lldb-vscode"
-
 [[language.debugger.templates]]
 name = "binary"
 request = "launch"
@@ -47,6 +51,5 @@ auto-format = true
 diagnostic-severity = "Hint"
 comment-token = "#"
 indent = {tab-width = 2, unit = " "}
-
 [language-server.elixir-ls]
 command = "elixir-ls"
