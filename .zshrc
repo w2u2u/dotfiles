@@ -135,6 +135,7 @@ source $ZPLUG_HOME/init.zsh
 # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 # alias go=richgo
+alias gotest="set -o pipefail && go test -json -cover | tparse -all"
 
 # Git
 alias git-undo-lastcommit="git reset --soft HEAD~"
@@ -214,4 +215,7 @@ export PATH=/Users/warunyu/.nimble/bin:$PATH
 export CHOOSENIM_NO_ANALYTICS=1
 export DO_NOT_TRACK=1
 
+# Helix
 export EDITOR=hx
+alias hxv="tmux split-window hx"
+alias hxh="tmux split-window -h hx"
