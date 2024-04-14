@@ -135,7 +135,7 @@ source $ZPLUG_HOME/init.zsh
 # export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 # alias go=richgo
-alias gotest="set -o pipefail && go test -json -cover | tparse -all"
+alias got="set -o pipefail && go test -json -cover | tparse -all"
 
 # Git
 alias git-undo-lastcommit="git reset --soft HEAD~"
@@ -219,3 +219,28 @@ export DO_NOT_TRACK=1
 export EDITOR=hx
 alias hxv="tmux split-window hx"
 alias hxh="tmux split-window -h hx"
+
+# Warp
+export WARP_THEMES_DIR="$HOME/.warp/themes"
+
+# Zig
+function zig_run() {
+  echo "watching $1"
+  echo "then execute, zig run $2"
+  fswatch -0 $1 | xargs -0 -n1 -I{} sh -c "clear && zig run $2"
+}
+function zig_test() {
+  echo "watching $1"
+  echo "then execute, zig test $2"
+  fswatch -0 $1 | xargs -0 -n1 -I{} sh -c "clear && zig test $2"
+}
+
+# Gleam
+function gleam_run() {
+  echo "watching $1"
+  echo "then execute, gleam run $2"
+}
+function gleam_test() {
+  echo "watching $1"
+  echo "then execute, gleam test $2"
+}
