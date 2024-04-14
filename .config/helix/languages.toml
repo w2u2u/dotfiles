@@ -26,7 +26,19 @@ language-servers = [ "zls" ]
 name = "gleam"
 auto-format = true
 language-servers = [ "gleam" ]
-formatter = { command = "gleam", args = [ "fmt" ] }
+file-types = [ "gleam" ]
+formatter = { command = "gleam format", args = [ "--stdin" ] }
+indent = { tab-width = 4, unit = "\t" }
+
+[[language]]
+name = "julia"
+scope = "source.julia"
+injection-regex = "julia"
+file-types = ["jl"]
+comment-token = "#"
+[language-server.julia]
+command = "julia"
+args = ["--startup-file=no", "--history-file=no", "--quiet", "--project", "-e", "using LanguageServer; runserver()"]
 
 [language.auto-pairs]
 '(' = ')'
