@@ -3,20 +3,20 @@ theme = "catppuccin_mocha"
 [editor]
 line-number = "relative"
 bufferline = "always"
-cursorline = true
-cursorcolumn = true
+cursorline = false
+cursorcolumn = false
 color-modes = true
 auto-completion = true
 auto-save = false
 auto-format = true
 
 [editor.cursor-shape]
-insert = "bar"
 normal = "block"
+insert = "bar"
 select = "underline"
 
 [editor.indent-guides]
-render = true
+render = false
 
 [editor.soft-wrap]
 enable = true
@@ -26,9 +26,24 @@ auto-signature-help = true
 display-inlay-hints = true
 
 [editor.statusline]
-left = ["mode", "file-name", "spinner", "file-modification-indicator", "read-only-indicator"]
+left = [
+  "mode",
+  "file-name",
+  "spinner",
+  "file-modification-indicator",
+  "read-only-indicator",
+]
 center = ["version-control"]
-right = ["diagnostics", "register", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+right = [
+  "diagnostics",
+  "register",
+  "selections",
+  "position",
+  "position-percentage",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
+]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -40,3 +55,4 @@ C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
 k = "normal_mode"
 [keys.normal."space"]
 x = ":buffer-close"
+t = { i = ":toggle lsp.display-inlay-hints" }
