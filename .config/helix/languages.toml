@@ -15,14 +15,18 @@ command = "clippy"
 [[language]]
 name = "go"
 auto-format = true
-[language-server.gopls]
-command = "gopls"
+language-servers = [ "gopls" ]
 
 [[language]]
 name = "zig"
 auto-format = true
-[language-server.zls]
-command = "zls"
+language-servers = [ "zls" ]
+
+[[language]]
+name = "gleam"
+auto-format = true
+language-servers = [ "gleam" ]
+formatter = { command = "gleam", args = [ "fmt" ] }
 
 [language.auto-pairs]
 '(' = ')'
