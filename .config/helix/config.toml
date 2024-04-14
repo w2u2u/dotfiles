@@ -51,6 +51,11 @@ mode.select = "SELECT"
 
 [keys.normal]
 C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+[keys.normal.g]
+j = "goto_next_paragraph"
+k = "goto_prev_paragraph"
 [keys.insert.j]
 k = "normal_mode"
 [keys.normal."space"]
