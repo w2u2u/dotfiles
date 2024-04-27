@@ -9,7 +9,7 @@ format = """
 $all
 $character
 """
-right_format = """$battery$time"""
+# right_format = """$battery$time"""
 
 # Minimal style
 # format = """$character"""
@@ -32,17 +32,20 @@ min_time = 10
 format = 'took [$duration](bold yellow)'
 disabled = true
 
+[battery]
+disabled = true
+
 [[battery.display]]
 threshold = 100
 style = 'bold green'
 
 [time]
 format = 'at [$time](bold yellow) '
-disabled = false
+disabled = true
 
-# Replace the '❯' symbol in the prompt with '➜'
+# Replace the '❯' symbol in the prompt with ''
 [character] 
-format = '$symbol [➜](bold green) '
+format = '$symbol [](bold green) '
 success_symbol = '[](bold green)' 
 error_symbol = '[](bold red)'
 
