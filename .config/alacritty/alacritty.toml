@@ -17,12 +17,12 @@ blur = true
 
 [font]
 # normal = { family = "MesloLGS Nerd Font", style = "Regular" }
-# normal = { family = "Liga SFMono Nerd Font", style = "Regular" }
+normal = { family = "Liga SFMono Nerd Font", style = "Regular" }
 # normal = { family = "Hasklug Nerd Font", style = "Regular" }
-normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
+# normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
 # normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 12
-offset = { x = 1, y = 0 }
+# size = 12
+offset = { x = 1, y = 8 }
 
 [cursor]
 style = { shape = "Block", blinking = "Never" }
