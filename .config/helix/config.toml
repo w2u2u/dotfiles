@@ -1,6 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
+scrolloff = 10
 line-number = "relative"
 bufferline = "always"
 cursorline = false
@@ -29,12 +30,13 @@ display-inlay-hints = true
 left = [
   "mode",
   "file-name",
-  "spinner",
   "file-modification-indicator",
   "read-only-indicator",
+  "spinner",
 ]
-center = ["version-control"]
+center = [ "version-control" ]
 right = [
+  "spinner",
   "diagnostics",
   "register",
   "selections",
