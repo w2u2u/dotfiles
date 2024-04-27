@@ -34,7 +34,9 @@ return {
 				"nim_langserver", -- Nim 👑
 				"elixirls", -- Elixir 🧪
 				"zls", -- Zig 󱐋
+				"crystalline", -- Crystal 🔮
 				"rubocop", -- Ruby 💎
+				"solargraph", -- Ruby 💎
 				"gopls",
 				"pylyzer", -- Python LSP
 				"ruff_lsp", -- Python LSP

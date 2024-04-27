@@ -45,13 +45,18 @@ return {
 			capabilities = capabilities,
 		})
 
-		lspconfig.elixirls.setup({
-			cmd = { "elixir-ls" },
+		-- lspconfig.elixirls.setup({
+		-- 	cmd = { "elixir-ls" },
+		-- 	on_attach = on_attach,
+		-- 	capabilities = capabilities,
+		-- })
+
+		lspconfig.zls.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
 
-		lspconfig.zls.setup({
+		lspconfig.crystalline.setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})

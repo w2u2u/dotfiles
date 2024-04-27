@@ -29,6 +29,9 @@ return {
 				"nvim-lua/plenary.nvim",
 			},
 			opts = {},
+			config = function()
+				vim.g.codeium_manual = true
+			end,
 		},
 	},
 	config = function()

@@ -9,6 +9,8 @@ return {
 			outline_window = {
 				auto_close = true,
 				auto_jump = true,
+				position = "left",
+				width = 12,
 			},
 			outline_items = {
 				show_symbol_lineno = true,
