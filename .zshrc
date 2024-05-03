@@ -84,7 +84,7 @@ ZSH_THEME="" # Use empty for StarShip prompt
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump z zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
+plugins=(git autojump zsh-syntax-highlighting zsh-autosuggestions zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,19 +122,11 @@ alias clean-docker-ps="docker stop $(docker ps -aq) && docker rm $(docker ps -aq
 alias reset-launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
 alias clean-cache="sudo rm -rf ~/Library/Caches/ && sudo rm -rf ~/Library/Application\ Support/"
 
-# zplug installation
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Golang
-# export GOPATH=$HOME/Workspaces/go
-# export PATH=$PATH:$HOME/Workspaces/go/bin
-# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
-# alias go=richgo
 alias got="set -o pipefail && go test -json -cover | tparse -all"
 
 # Git
@@ -143,11 +135,9 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Neovim
 alias vim="nvim"
-# alias vim="lvim"
 alias nvim-clean="rm -rf ~/.cache/nvim && rm -rf ~/.local/share/nvim && rm -rf ~/.local/state/nvim"
 
 # Ruby
-# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
   export PATH=/opt/homebrew/opt/ruby/bin:$PATH
   export PATH=`gem environment gemdir`/bin:$PATH
@@ -167,8 +157,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=/Users/warunyu/.local/bin:$PATH
 
 # A modern replacement for ls
-alias lsl="eza --icons -lF --git --header"
-alias ls="eza --icons"
+alias ls="eza --color=always --icons=always --long --no-user --no-time --no-permissions --no-filesize --git --git-ignore"
 
 # Prompt's New line
 # precmd() { print "" }
@@ -197,14 +186,6 @@ bindkey "\ew" forward-word # alt+w
 bindkey "\eb" backward-word # alt+b
 bindkey "\el" forward-word # alt+l
 bindkey "\eh" backward-word # alt+h
-
-# Zsh functions
-fpath+=~/.zfunc
-autoload -Uz compinit && compinit
-
-# Poetry a Python package manager
-# mkdir $ZSH_CUSTOM/plugins/poetry
-# poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
 
 # Modular => Mojo 🔥
 export MODULAR_HOME="$HOME/.modular"
@@ -244,3 +225,58 @@ function gleam_test() {
   echo "watching $1"
   echo "then execute, gleam test $2"
 }
+
+# fzf
+eval "$(fzf --zsh)"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:#cdd6f4,fg+:#d0d0d0,bg:-1,bg+:#262626
+  --color=hl:#f38ba8,hl+:#5fd7ff,info:#cba6f7,marker:#f5e0dc
+  --color=prompt:#cba6f7,spinner:#f5e0dc,pointer:#f5e0dc,header:#f38ba8
+  --color=border:#262626,label:#aeaeae,query:#d9d9d9
+  --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
+  --marker=">" --pointer="◆" --separator="─" --scrollbar="│"
+  --layout="reverse" --info="right"'
+
+# fd
+export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
+_fzf_compgen_path() {
+  fd --hidden --exclude .git . "$1"
+}
+_fzf_compgen_dir() {
+  fd --type=d --hidden --exclude .git . "$1"
+}
+source ~/workspaces/github.com/junegunn/fzf-git.sh/fzf-git.sh
+
+# eza fzf integration
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+# Advanced customization of fzf options via _fzf_comprun function
+# - The first argument to the function is the name of the command.
+# - You should make sure to pass the rest of the arguments to fzf.
+_fzf_comprun() {
+  local command=$1
+  shift
+
+  case "$command" in
+    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
+    ssh)          fzf --preview 'dig {}'                   "$@" ;;
+    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+  esac
+}
+
+# bat
+export BAT_THEME=Catppuccin_Mocha
+
+# thefuck 
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
+
+# Zoxide (cd replacement) 
+eval "$(zoxide init zsh)"
+alias cd="z"
