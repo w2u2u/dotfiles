@@ -1,7 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
-scrolloff = 10
+scrolloff = 20
 line-number = "relative"
 bufferline = "always"
 cursorline = false
@@ -10,6 +10,7 @@ color-modes = true
 auto-completion = true
 auto-save = false
 auto-format = true
+mouse = true
 
 [editor.cursor-shape]
 normal = "block"
