@@ -25,7 +25,7 @@ enable = true
 
 [editor.lsp]
 auto-signature-help = true
-display-inlay-hints = true
+display-inlay-hints = false
 
 [editor.statusline]
 left = [
