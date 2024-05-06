@@ -1,0 +1,61 @@
+# Author : Warunyu Jaimuagn <warunyu.pon@gmail.com>
+# Theme: Xcode
+
+"attribute" = {}
+
+"type" = "class_type_name"
+"type.builtin" = "class_type_name"
+"type.parameter" = "class_type_name"
+"type.enum.variant" = "class_type_name"
+
+"constructor" = "class_type_name"
+
+"constant" = "constant"
+"constant.builtin.boolean" = "keyword"
+"constant.character.escape" = "constant"
+"constant.numeric.integer" = "numeric_operator"
+"constant.numeric.float" = "numeric_operator"
+
+"string" = "string"
+"string.regex" = "string"
+"string.special.path" = "string"
+"string.special.url" = "url"
+"string.special.symbol" = "string"
+
+"comment" = "comment_hint"
+
+"keyword" = "keyword"
+
+"operator" = "numeric_operator"
+
+"function" = "function"
+
+"ui.background" = { fg = "fg" }
+"ui.selection" = { fg = "bg", bg = "#80bcff" }
+
+"ui.cursor" = { bg = "#679aff" }
+
+"ui.linenr" = { fg = "comment_hint" }
+"ui.linenr.selected" = { fg = "#679aff" }
+
+"ui.statusline" = { bg = "bg" }
+"ui.statusline.normal" = { bg = "#b181eb", fg = "bg" }
+"ui.statusline.insert" = { bg = "#79c2b3", fg = "bg" }
+"ui.statusline.select" = { bg = "#d9c97c", fg = "bg" }
+
+"ui.virtual.inlay-hint" = { fg = "comment_hint" }
+"ui.virtual.wrap" = { fg = "comment_hint" }
+
+[palette]
+bg = "#232329"
+fg = "#ffffff"
+
+class_type_name = "#dabaff"
+string = "#ff8170"
+url = "#659aff"
+numeric_operator = "#d9c97c"
+keyword = "#ff7bb2"
+constant = "#79c2b3"
+cursor = "#679aff"
+function = "#b181eb"
+comment_hint = "#7e8b97"

@@ -280,3 +280,25 @@ eval $(thefuck --alias fk)
 # Zoxide (cd replacement) 
 eval "$(zoxide init zsh)"
 alias cd="z"
+
+# bun completions
+[ -s "/Users/warunyu/.bun/_bun" ] && source "/Users/warunyu/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# deno
+export DENO_INSTALL="/Users/warunyu/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# dprint
+export DPRINT_INSTALL="/Users/warunyu/.dprint"
+export PATH="$DPRINT_INSTALL/bin:$PATH"
+
+# avm
+export AVM_INSTALL="/Users/warunyu/.avm"
+export PATH="$AVM_INSTALL/bin:$PATH"
+
+# yarn
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

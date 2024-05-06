@@ -24,6 +24,8 @@ request = "launch"
 completion = [ { name = "binary", completion = "filename" } ]
 args = { program = "{0}", initCommands = [ "command script import /opt/homebrew/Cellar/rust/1.71.0/lib/rustlib/etc/lldb_lookup.py", "command source -s 0 /opt/homebrew/Cellar/rust/1.71.0/lib/rustlib/etc/lldb_commands" ] }
 
+######################################################################
+
 [[language]]
 name = "go"
 indent = { tab-width = 8, unit = "\t" }
@@ -40,6 +42,8 @@ rangeVariableTypes = true
 command = "golangci-lint-langserver"
 [language-server.golangci-lint-lsp.config]
 command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
+
+######################################################################
 
 [[language]]
 name = "zig"
@@ -75,6 +79,8 @@ args = { console = "internalConsole", attachCommands = [ "platform select remote
 name = "zig"
 source = { git = "https://github.com/maxxnino/tree-sitter-zig", rev = "0d08703e4c3f426ec61695d7617415fff97029bd" }
 
+######################################################################
+
 [[language]]
 name = "gleam"
 scope = "source.gleam"
@@ -92,6 +98,8 @@ args = [ "lsp" ]
 name = "gleam"
 source = { git = "https://github.com/gleam-lang/tree-sitter-gleam", rev = "bcf9c45b56cbe46e9dac5eee0aee75df270000ac" }
 
+######################################################################
+
 [[language]]
 name = "crystal"
 scope = "source.cr"
@@ -101,6 +109,8 @@ comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 grammar = "ruby"
 language-servers = [ "crystalline" ]
+
+######################################################################
 
 [[language]]
 name = "julia"
@@ -118,6 +128,8 @@ indent = { tab-width = 4, unit = "    " }
 name = "julia"
 source = { git = "https://github.com/tree-sitter/tree-sitter-julia", rev = "8fb38abff74652c4faddbf04d2d5bbbc6b4bae25" }
 
+######################################################################
+
 [[language]]
 name = "elixir"
 scope = "source.elixir"
@@ -130,3 +142,162 @@ comment-token = "#"
 indent = {tab-width = 2, unit = " "}
 [language-server.elixir-ls]
 command = "elixir-ls"
+
+######################################################################
+
+#####
+#
+# efm-lsp-eslint
+#
+#####
+
+[language-server.efm-lsp-eslint]
+command = "efm-langserver"
+
+[language-server.efm-lsp-eslint.config]
+documentFormatting = true
+
+[[language-server.efm-lsp-prettier.config.languages.javascript]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.react]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.typescript]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.typescriptreact]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.css]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.scss]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.html]]
+formatCommand ="eslint --stdin-filename ${INPUT}"
+formatStdin = true
+
+#####
+#
+# efm-lsp-prettier
+#
+#####
+
+[language-server.efm-lsp-prettier]
+command = "efm-langserver"
+
+[language-server.efm-lsp-prettier.config]
+documentFormatting = true
+
+[[language-server.efm-lsp-prettier.config.languages.javascript]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.react]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.typescript]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.typescriptreact]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.css]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.scss]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+[[language-server.efm-lsp-prettier.config.languages.html]]
+formatCommand ="prettierd --stdin-filepath ${INPUT}"
+formatStdin = true
+
+#####
+#
+# emmet
+#
+#####
+
+[language-server]
+emmet-ls = { command = "emmet-ls", args = [ "--stdio" ]}
+
+#####
+#
+# languages
+#
+#####
+
+[[language]]
+name = "javascript"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "efm-lsp-eslint", only-features = [ "format" ] },
+  { name = "typescript-language-server", except-features = [ "format" ] }
+]
+
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "efm-lsp-eslint", only-features = [ "format" ] },
+  { name = "typescript-language-server", except-features = [ "format" ] },
+  { name = "emmet-ls" }
+]
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "efm-lsp-eslint", only-features = [ "format" ] },
+  { name = "typescript-language-server", except-features = [ "format" ] }
+]
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "efm-lsp-eslint", only-features = [ "format" ] },
+  { name = "typescript-language-server", except-features = [ "format" ] },
+  { name = "emmet-ls" }
+]
+
+[[language]]
+name = "css"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "vscode-css-language-server", except-features = [ "format" ] }
+]
+
+[[language]]
+name = "scss"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "vscode-css-language-server", except-features = [ "format" ] }
+]
+
+[[language]]
+name = "html"
+auto-format = true
+language-servers = [
+  { name = "efm-lsp-prettier", only-features = [ "format" ] },
+  { name = "vscode-css-language-server", except-features = [ "format" ] }
+]
