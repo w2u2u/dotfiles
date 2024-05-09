@@ -301,3 +301,33 @@ language-servers = [
   { name = "efm-lsp-prettier", only-features = [ "format" ] },
   { name = "vscode-css-language-server", except-features = [ "format" ] }
 ]
+
+######################################################################
+
+[[language]]
+name = "hcl"
+scope = "source.hcl"
+injection-regex = "(hcl|tf|nomad)"
+language-id = "terraform"
+file-types = ["hcl", "tf", "nomad"]
+comment-token = "#"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "terraform-ls" ]
+auto-format = true
+
+[[grammar]]
+name = "hcl"
+source = { git = "https://github.com/MichaHoffmann/tree-sitter-hcl", rev = "3cb7fc28247efbcb2973b97e71c78838ad98a583" }
+
+[[language]]
+name = "tfvars"
+scope = "source.tfvars"
+language-id = "terraform-vars"
+file-types = ["tfvars"]
+comment-token = "#"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "terraform-ls" ]
+auto-format = true
+grammar = "hcl"
