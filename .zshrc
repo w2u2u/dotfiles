@@ -302,3 +302,7 @@ export PATH="$AVM_INSTALL/bin:$PATH"
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# TERM
+export TERM="xterm-256color"
+[[ -n $TMUX ]] && export TERM="screen-256color"
