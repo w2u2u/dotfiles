@@ -306,3 +306,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 # TERM
 export TERM="xterm-256color"
 [[ -n $TMUX ]] && export TERM="screen-256color"
+
+# Alacritty
+alias alacritty="/Applications/Alacritty.app/Contents/MacOS/alacritty"
