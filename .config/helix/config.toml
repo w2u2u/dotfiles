@@ -1,7 +1,7 @@
 theme = "catppuccin_mocha"
 
 [editor]
-scrolloff = 20
+scrolloff = 10
 line-number = "relative"
 bufferline = "always"
 cursorline = false
