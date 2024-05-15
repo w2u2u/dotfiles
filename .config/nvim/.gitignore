@@ -1,2 +1,8 @@
-lazy-lock.json
-lua/current-theme.lua
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
