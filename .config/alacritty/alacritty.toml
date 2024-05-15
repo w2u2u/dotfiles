@@ -29,4 +29,7 @@ offset = { x = 0, y = 8 }
 style = { shape = "Block", blinking = "Never" }
 
 [keyboard]
-bindings = []
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left", mods = "Alt", chars = "\u001BB" },
+]
