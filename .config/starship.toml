@@ -19,10 +19,21 @@ $character
 disabled = true
 
 [directory]
+style = "bold fg:#769ff0"
 truncation_length = 2
 
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
 [git_branch]
+style = "bold fg:#769ff0"
 symbol = ' '
+
+[git_status]
+style = "bold fg:#769ff0"
 
 [git_metrics]
 disabled = false
@@ -44,10 +55,10 @@ format = 'at [$time](bold yellow) '
 disabled = true
 
 # Replace the '❯' symbol in the prompt with ''
-[character] 
-format = '$symbol [](bold green) '
-success_symbol = '[](bold green)' 
-error_symbol = '[](bold red)'
+[character]
+format = '$symbol [](bold #9ece6a) '
+success_symbol = '[](bold #9ece6a)'
+error_symbol = '[](bold #bb616b)'
 
 [memory_usage]
 format = "$symbol[${ram}( | ${swap})]($style) "
@@ -58,3 +69,9 @@ disabled = true
 # Disable the package module, hiding it from the prompt completely
 [package]
 disabled = false
+
+[aws]
+symbol = "☁️ "
+
+[gcloud]
+symbol = "☁️ "
