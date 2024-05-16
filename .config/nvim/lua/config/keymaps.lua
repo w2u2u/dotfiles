@@ -11,6 +11,7 @@ keymap.set("i", "jk", "<esc>")
 -- Movement
 keymap.set("n", "gh", "g^")
 keymap.set("n", "gl", "g$")
+keymap.set("n", "ge", "G")
 
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
