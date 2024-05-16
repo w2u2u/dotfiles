@@ -309,3 +309,6 @@ export TERM="xterm-256color"
 
 # Alacritty
 alias alacritty="/Applications/Alacritty.app/Contents/MacOS/alacritty"
+
+# AWS
+export AWS_PROFILE=warunyu
