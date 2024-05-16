@@ -6,7 +6,6 @@ vim.opt.scrolloff = 10
 vim.opt.ignorecase = true
 vim.opt.wrap = true
 vim.opt.showbreak = "↪ "
-vim.opt.mouse = ""
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
