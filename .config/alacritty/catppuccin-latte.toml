@@ -4,9 +4,9 @@ foreground = "#4C4F69"
 dim_foreground = "#4C4F69"
 bright_foreground = "#4C4F69"
 
-[colors.cursor]
-text = "#EFF1F5"
-cursor = "#DC8A78"
+# [colors.cursor]
+# text = "#EFF1F5"
+# cursor = "#DC8A78"
 
 [colors.vi_mode_cursor]
 text = "#EFF1F5"
