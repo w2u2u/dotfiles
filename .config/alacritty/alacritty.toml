@@ -3,25 +3,26 @@ import = [
   # "~/.config/alacritty/catppuccin-latte.toml"
   # "~/.config/alacritty/catppuccin-frappe.toml"
   # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml",
-  "~/.config/alacritty/tokyo-night.yaml",
+  "~/.config/alacritty/catppuccin-mocha.toml",
+  # "~/.config/alacritty/tokyo-night.yaml",
 ]
 
 [window]
 padding = { x = 0, y = 0 }
 dynamic_padding = true
 decorations = "Buttonless"
-opacity = 0.70
+opacity = 0.80
 blur = true
 
 [font]
 # normal = { family = "MesloLGS Nerd Font", style = "Regular" }
-normal = { family = "Liga SFMono Nerd Font", style = "Light" }
+# normal = { family = "Liga SFMono Nerd Font", style = "Light" }
 # normal = { family = "Hasklug Nerd Font", style = "Regular" }
 # normal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
 # normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
-size = 10
-offset = { x = 0, y = 8 }
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+size = 14
+# offset = { x = 0, y = 8 }
 
 [cursor]
 style = { shape = "Block", blinking = "Never" }

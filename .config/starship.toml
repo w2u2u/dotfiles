@@ -19,7 +19,7 @@ $character
 disabled = true
 
 [directory]
-style = "bold fg:#769ff0"
+style = "bold"
 truncation_length = 2
 
 [directory.substitutions]
@@ -29,11 +29,11 @@ truncation_length = 2
 "Pictures" = " "
 
 [git_branch]
-style = "bold fg:#769ff0"
+style = "bold"
 symbol = ' '
 
 [git_status]
-style = "bold fg:#769ff0"
+style = "bold"
 
 [git_metrics]
 disabled = false
@@ -56,9 +56,9 @@ disabled = true
 
 # Replace the '❯' symbol in the prompt with ''
 [character]
-format = '$symbol [](bold #9ece6a) '
-success_symbol = '[](bold #9ece6a)'
-error_symbol = '[](bold #bb616b)'
+format = '$symbol [](bold green) '
+success_symbol = '[](bold green)'
+error_symbol = '[](bold red)'
 
 [memory_usage]
 format = "$symbol[${ram}( | ${swap})]($style) "
