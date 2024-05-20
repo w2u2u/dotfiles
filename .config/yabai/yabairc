@@ -30,3 +30,5 @@ yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^LINE$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^Font Book$" manage=off
