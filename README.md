@@ -49,3 +49,17 @@ config add ~/.zshrc
 config commit -m "Add .kitty.conf/.tmux.conf/.zshrc files"
 config push
 ```
+
+---
+
+## Cloning the Repo
+
+### Prerequisites
+
+Install all tools above.
+
+```sh
+cd ~
+
+git clone https://github.com/w2u2u/dotfiles.git
+```
