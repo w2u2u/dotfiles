@@ -19,7 +19,6 @@ $character
 disabled = true
 
 [directory]
-style = "bold"
 truncation_length = 2
 
 [directory.substitutions]
@@ -29,11 +28,9 @@ truncation_length = 2
 "Pictures" = " "
 
 [git_branch]
-style = "bold"
 symbol = ' '
 
 [git_status]
-style = "bold"
 
 [git_metrics]
 disabled = false
@@ -71,7 +68,9 @@ disabled = true
 disabled = false
 
 [aws]
-symbol = "☁️ "
+symbol = "󰸏 "
+format = 'on [$symbol$region]($style) '
 
 [gcloud]
-symbol = "☁️ "
+symbol = "󱇶 "
+format = 'on [$symbol$region]($style) '
