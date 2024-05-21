@@ -2,23 +2,35 @@
 
 Store dotfiles
 
-Terminal Emulators
+## Configurations
+
+### Shell
+
+- [Zsh](https://github.com/ohmyzsh/ohmyzsh)
+
+### Terminal Emulators
 
 - [Alacritty](https://github.com/alacritty/alacritty)
 - [Kitty](https://github.com/kovidgoyal/kitty)
 
-Terminal Multiplexer
+### Terminal Multiplexer
 
 - [Tmux](https://github.com/tmux/tmux)
 
-Text Editors
+### Text Editors
 
 - [Neovim](https://github.com/neovim/neovim)
+- [Helix](https://github.com/helix-editor/helix)
 
-Shell Prompts
+### Shell Prompts
 
 - [Starship](https://github.com/starship/starship)
 - [Spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
+
+### Window managers
+
+- [Yabai](https://github.com/koekeishiya/yabai)
+- [Skhd](https://github.com/koekeishiya/skhd)
 
 ---
 
