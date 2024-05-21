@@ -4,7 +4,7 @@
 
 vim.opt.scrolloff = 10
 vim.opt.ignorecase = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.showbreak = "↪ "
 
 -- Undercurl

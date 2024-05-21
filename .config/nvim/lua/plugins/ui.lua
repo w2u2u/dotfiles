@@ -74,4 +74,11 @@ return {
       })
     end,
   },
+  -- custom outline
+  {
+    "hedyhli/outline.nvim",
+    opts = {
+      preview_window = { auto_preview = true },
+    },
+  },
 }
