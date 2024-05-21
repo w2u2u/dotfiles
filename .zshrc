@@ -149,7 +149,7 @@ fi
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# Ruby version manager 
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add .local/bin on PATH
@@ -213,6 +213,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"
   --layout="reverse" --info="right"'
+bindkey "\C-n" fzf-history-widget
 
 # fd
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
@@ -273,7 +274,7 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 export DPRINT_INSTALL="/Users/warunyu/.dprint"
 export PATH="$DPRINT_INSTALL/bin:$PATH"
 
-# avm
+# Anchor Version Manager 
 export AVM_INSTALL="/Users/warunyu/.avm"
 export PATH="$AVM_INSTALL/bin:$PATH"
 
@@ -290,3 +291,7 @@ alias alacritty="/Applications/Alacritty.app/Contents/MacOS/alacritty"
 # AWS
 export AWS_PROFILE=warunyu
 
+# Tmux
+export PATH="/opt/homebrew/opt/bc/bin:$PATH"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
