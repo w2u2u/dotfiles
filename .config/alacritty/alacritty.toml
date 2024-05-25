@@ -7,13 +7,13 @@ import = [
 padding = { x = 0, y = 0 }
 dynamic_padding = true
 decorations = "Buttonless"
-opacity = 0.50
+opacity = 0.40
 blur = true
 
 [font]
-normal = { family = "MesloLGM Nerd Font", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
 size = 12
-offset = { x = 0, y = 1 }
+offset = { x = 0, y = 2 }
 
 [cursor]
 style = { shape = "Block", blinking = "Never" }
