@@ -51,3 +51,12 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
+
+-- Github Copilot
+keymap.set({ "n", "v" }, "<leader>ccq", function()
+  local input = vim.fn.input("Quick Chat: ")
+
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
+end, { desc = "CopilotChat - Quick chat" })
