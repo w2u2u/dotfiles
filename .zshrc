@@ -299,3 +299,6 @@ export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
 # Github
 alias \?\?="gh copilot suggest -t shell"
 alias git\?="gh copilot suggest -t git"
+
+# Catppuccin for zsh-syntax-highlighting
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
