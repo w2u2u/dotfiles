@@ -295,3 +295,7 @@ export AWS_PROFILE=warunyu
 export PATH="/opt/homebrew/opt/bc/bin:$PATH"
 export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/gawk/libexec/gnubin:$PATH"
+
+# Github
+alias \?\?="gh copilot suggest -t shell"
+alias git\?="gh copilot suggest -t git"
