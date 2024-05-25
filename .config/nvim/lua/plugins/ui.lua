@@ -70,4 +70,11 @@ return {
       preview_window = { auto_preview = true },
     },
   },
+  -- disable indent blankline
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      indent = { char = "" },
+    },
+  },
 }
