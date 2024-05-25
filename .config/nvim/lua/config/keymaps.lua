@@ -9,8 +9,8 @@ local opts = { noremap = true, silent = true }
 keymap.set("i", "jk", "<esc>")
 
 -- Movement
-keymap.set("n", "gh", "g^")
-keymap.set("n", "gl", "g$")
+keymap.set("n", "gh", "^")
+keymap.set("n", "gl", "$")
 keymap.set("n", "ge", "G")
 
 -- Increment/Decrement
