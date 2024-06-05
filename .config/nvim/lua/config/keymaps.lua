@@ -9,9 +9,9 @@ local opts = { noremap = true, silent = true }
 keymap.set("i", "jk", "<esc>")
 
 -- Movement
-keymap.set("n", "gh", "^")
-keymap.set("n", "gl", "$")
-keymap.set("n", "ge", "G")
+keymap.set({ "n", "v" }, "gh", "^")
+keymap.set({ "n", "v" }, "gl", "$")
+keymap.set({ "n", "v" }, "ge", "G")
 
 -- Increment/Decrement
 keymap.set("n", "+", "<C-a>")
@@ -48,9 +48,9 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Diagnostics
-keymap.set("n", "<C-j>", function()
+keymap.set("n", "<leader>j", function()
   vim.diagnostic.goto_next()
-end, opts)
+end, { desc = "Next Diagnostic" })
 
 -- Github Copilot
 keymap.set({ "n", "v" }, "<leader>ccq", function()
