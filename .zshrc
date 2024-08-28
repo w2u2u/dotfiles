@@ -225,7 +225,7 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
-source ~/workspaces/github.com/junegunn/fzf-git.sh/fzf-git.sh
+source ~/Developer/workspaces/github.com/junegunn/fzf-git.sh/fzf-git.sh
 
 # eza fzf integration
 show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
@@ -302,3 +302,13 @@ alias git\?="gh copilot suggest -t git"
 
 # Catppuccin for zsh-syntax-highlighting
 source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# Neofetch
+alias nf=neofetch
+
+# N (Node version manager)
+export N_PREFIX=$HOME/.n
+export PATH=$N_PREFIX/bin:$PATH
+
+# Flutter
+export PATH=$HOME/Developer/flutter/bin:$PATH
