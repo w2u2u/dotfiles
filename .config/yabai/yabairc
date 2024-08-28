@@ -1,7 +1,7 @@
 set -x
 
 # variables
-padding="15"
+padding="5"
 
 # bsp, stack, float
 yabai -m config layout bsp
@@ -38,3 +38,11 @@ yabai -m rule --add app="^Activity Monitor$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^Font Book$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Docker Desktop$" manage=off
+yabai -m rule --add app="^Homerow$" manage=off
+yabai -m rule --add app="^ShortCat$" manage=off
+yabai -m rule --add app="^Mechvibes$" manage=off
+yabai -m rule --add app="^AppCleaner$" manage=off
+yabai -m rule --add app="^Homwrow$" manage=off
+yabai -m rule --add app="^Keychain Access$" manage=off
+yabai -m rule --add app="^Shortcuts$" manage=off
